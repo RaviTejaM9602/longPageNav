@@ -1,0 +1,142 @@
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+#primary-nav .nav-item.active {
+    background-color: #00587a;
+}
+
+#sticky-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    z-index: 100;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+#sticky-nav.overlay {
+    /* Styles for overlay mode */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 101;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;  /* Aligns child elements to either side */
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    z-index: 100;
+    padding: 10px;
+}
+
+#reading-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#show-content-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+}
+
+#show-content-btn:hover {
+    background-color: #007a3d;
+}
+
+#primary-nav {
+    display: none; /* Initially hide nav items */
+    margin-top: 30px;
+}
+
+#primary-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#primary-nav .nav-item {
+    width: calc(25% - 10px); /* 4 items in each row with 10px margin between them */
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#primary-nav .nav-item a {
+    display: block;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#primary-nav .nav-item:hover {
+    background-color: #007a3d;
+}
+
+#primary-nav .nav-item.active {
+    background-color: #ff4400; /* Change color when selected */
+}
+
+#progress-bar {
+    height: 5px;
+    background-color: #007acc;
+    position: absolute; /* Position relative to the #sticky-nav */
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#show-content-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+}
+
+#show-content-btn:hover {
+    background-color: #007a3d;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #primary-nav .nav-item {
+        width: calc(100% - 10px); /* 1 item per row with 10px margin */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #primary-nav .nav-item {
+        width: calc(33.33% - 10px); /* 3 items in each row with 10px margin */
+    }
+}
+
+#sticky-nav a.active {
+    background-color: green;
+}
+
+
