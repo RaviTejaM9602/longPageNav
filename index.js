@@ -80,6 +80,23 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    function checkStickyNav() {
+        let stickyNav = document.getElementById('sticky-nav');
+        let viewportHeight = window.innerHeight;
+
+        if (stickyNav.offsetHeight > viewportHeight / 2) {
+            stickyNav.style.display = 'none';
+        } else {
+            stickyNav.style.display = 'flex';
+        }
+    }
+
+    // Call the function on page load
+    checkStickyNav();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', checkStickyNav);
 });
 
 
