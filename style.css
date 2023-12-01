@@ -85,7 +85,6 @@ body {
 }
 
 #primary-nav .nav-item {
-    width: calc(25% - 30px); 
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
 }
@@ -129,4 +128,16 @@ body {
 
 #nav-overlay.show + #progress-bar {
     top: calc(250% + 10px); 
+}
+
+@media (max-width: 500px) {
+    #primary-nav .nav-item {
+        width: 100%; 
+    }
+}
+
+@media (min-width: 501px){
+    #primary-nav .nav-item {
+        width: calc(25% - 10px); 
+    }
 }
